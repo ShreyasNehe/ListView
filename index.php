@@ -32,7 +32,7 @@ echo "</script>";
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/e5f83b95ee.js" crossorigin="anonymous"></script>
     <script src="./dropdown_search.js"></script>
-    
+
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="./neww.js"></script>
 
@@ -95,7 +95,7 @@ echo "</script>";
 
     ?>
 
-  
+
 
     <div class="hello" id='item'>
         <br>
@@ -128,7 +128,7 @@ echo "</script>";
                     <th>
                         <button id="togglebtn" type="button" onclick="togglediv('item')" class='tgl' style="font-size:21px;">
                             <i class="fa fa-gear"></i>
-                       
+
                     </th>
 
                     <!-- <input type="checkbox" id="select-all"> -->
@@ -257,14 +257,14 @@ echo "</script>";
     </head>
     <!-- JavaScript Libraries -->
 
-  
+
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/e5f83b95ee.js" crossorigin="anonymous"></script>
     <!-- <script src="./script2.js"></script> -->
 
     <script src="./dropdown_search.js"></script>
     <script src="./script_form.js"></script>
-  
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
@@ -272,81 +272,79 @@ echo "</script>";
 
 
     <script>
-    // Object to store current sort orders for each column
-    let sortOrders = {};
+        // Object to store current sort orders for each column
+        let sortOrders = {};
 
-    // Function to sort the table based on the selected column
-    function sortTable(columnIndex) {
-        // Skip sorting for the first column
-        if (columnIndex === 0) {
-            return;
-        }
-
-        // Variables for table and sorting logic
-        let table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-
-        // Get the table element by its ID
-        table = document.getElementById("table1");
-
-        // Initialize the sorting logic
-        switching = true;
-        dir = "asc"; // Default sort direction is ascending
-
-        // Toggle sort order (asc/desc) for the selected column
-        if (sortOrders[columnIndex] === "asc") {
-            sortOrders[columnIndex] = "desc";
-        } else {
-            sortOrders[columnIndex] = "asc";
-        }
-
-        // Continue sorting until no more switches are needed
-        while (switching) {
-            switching = false;
-            rows = table.rows;
-
-            // Iterate through rows (skipping the header row)
-            for (i = 1; i < (rows.length - 1); i++) {
-                shouldSwitch = false;
-                // Get the values of the two cells to be compared
-                x = rows[i].getElementsByTagName("TD")[columnIndex];
-                y = rows[i + 1].getElementsByTagName("TD")[columnIndex];
-
-                // Extract and normalize values for comparison
-                let xValue = x.getAttribute("type") === "number" ? parseFloat(x.innerHTML) : x.innerHTML;
-                let yValue = y.getAttribute("type") === "number" ? parseFloat(y.innerHTML) : y.innerHTML;
-
-                // Check if a switch is needed based on the sort order and values
-                if ((dir === "asc" && xValue > yValue) || (dir === "desc" && xValue < yValue)) {
-                    shouldSwitch = true;
-                    break;
-                }
+        // Function to sort the table based on the selected column
+        function sortTable(columnIndex) {
+            // Skip sorting for the first column
+            if (columnIndex === 0) {
+                return;
             }
 
-            // If a switch is needed, perform the switch and update switch count
-            if (shouldSwitch) {
-                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-                switching = true;
-                switchcount++;
+            // Variables for table and sorting logic
+            let table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+
+            // Get the table element by its ID
+            table = document.getElementById("table1");
+
+            // Initialize the sorting logic
+            switching = true;
+            dir = "asc"; // Default sort direction is ascending
+
+            // Toggle sort order (asc/desc) for the selected column
+            if (sortOrders[columnIndex] === "asc") {
+                sortOrders[columnIndex] = "desc";
             } else {
-                // If no switches were made and sorting was in ascending order, switch to descending
-                if (switchcount === 0 && dir === "asc") {
-                    dir = "desc";
+                sortOrders[columnIndex] = "asc";
+            }
+
+            // Continue sorting until no more switches are needed
+            while (switching) {
+                switching = false;
+                rows = table.rows;
+
+                // Iterate through rows (skipping the header row)
+                for (i = 1; i < (rows.length - 1); i++) {
+                    shouldSwitch = false;
+                    // Get the values of the two cells to be compared
+                    x = rows[i].getElementsByTagName("TD")[columnIndex];
+                    y = rows[i + 1].getElementsByTagName("TD")[columnIndex];
+
+                    // Extract and normalize values for comparison
+                    let xValue = x.getAttribute("type") === "number" ? parseFloat(x.innerHTML) : x.innerHTML;
+                    let yValue = y.getAttribute("type") === "number" ? parseFloat(y.innerHTML) : y.innerHTML;
+
+                    // Check if a switch is needed based on the sort order and values
+                    if ((dir === "asc" && xValue > yValue) || (dir === "desc" && xValue < yValue)) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                }
+
+                // If a switch is needed, perform the switch and update switch count
+                if (shouldSwitch) {
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
                     switching = true;
+                    switchcount++;
+                } else {
+                    // If no switches were made and sorting was in ascending order, switch to descending
+                    if (switchcount === 0 && dir === "asc") {
+                        dir = "desc";
+                        switching = true;
+                    }
                 }
             }
         }
-    }
-</script>
+    </script>
 
 
     <script src="./dropdown_search.js"></script>
     <script src="./neww.js"></script>
 
-  
+
 
     <script>
-    
-
         function togglediv(id) {
             var div = document.getElementById(id);
             div.style.display = div.style.display == "none" ? "block" : "none";
@@ -354,7 +352,7 @@ echo "</script>";
         // }  });
     </script>
 
-    
+
     <script>
         function deleteRows() {
             var table = document.getElementById('table1');
@@ -395,7 +393,7 @@ echo "</script>";
             xhr.send("rowsToDelete=" + JSON.stringify(rowsToDelete));
         }
     </script>
- 
+
 </body>
 
 </html>
