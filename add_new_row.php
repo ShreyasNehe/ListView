@@ -77,7 +77,7 @@
 
             <div>
                <button type="submit" class="btn btn-success" name="submit">Save</button>
-               <a href="index2.php" class="btn btn-danger">Cancel</a>
+               <a href="index.php" class="btn btn-danger">Cancel</a>
             </div>
          </form>
       </div>
