@@ -1,0 +1,357 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+  }
+  
+  #table1 tr {
+    border: none;
+  }
+  
+  table{
+      width:100%;
+      border-collapse: collapse;
+      font-family: Arial, Helvetica, sans-serif;
+  
+  }
+  /* table th[data-sort]::before,
+  table th[data-sort]::after{
+  
+    content:'';
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    border: 4px solid transparent;
+  
+  } */
+  /* table th[data-sort]::before{
+    border-bottom-color: red;
+  }
+  table th[data-sort]::after{
+    border-top-color: red;
+  
+  } */
+  table th{
+    cursor: pointer;
+    background-color:burlywood;
+    border: none;
+    position: relative;
+        width: 150px; /* Set your desired fixed width */
+        padding-right: 40px; /* Ensure space for the dropdown icon */
+  
+  }
+  table td {
+    border: none;
+  }
+  /* tr td img{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    position: relative;
+    right: 20px;
+  } */
+  td, th {
+      border: 1px solid black;
+      text-align: center;
+      padding: 8px;
+      border-collapse: collapse;
+    }
+  /* .check{
+   position: relative;
+   right: 10px;
+  } */
+    tbody tr:nth-child(even) {
+      background-color:grey;
+  }
+  .dropdown-content{
+    color: aqua;
+  }
+  /* #currId{
+    border:2px solid black;
+    background-color:aquamarine;
+    height: 50px;
+    width: 70x;
+    padding: 1px;
+    position: relative;
+    left: 1110px;
+  }
+  
+  #locId{
+    border:2px solid black;
+    background-color:aquamarine;
+    height: 50px;
+    width: 70x;
+    padding: 1px;
+    position: relative;
+    left: 1120px;
+  }
+  
+  #salId{
+    border:2px solid black;
+    background-color:aquamarine;
+    height: 50px;
+    width: 70x;
+    padding: 1px;
+    position: relative;
+    left: 1130px;
+  } */
+
+    .input_group{
+      padding: 10px;
+  
+    }
+    .input_group img{
+      position: relative;
+  
+      height: 1.2rem;
+      width: 1.2rem;
+    }
+    
+    tbody tr:hover {
+      background-color:bisque  !important;
+  }
+  tbody th{
+    background-color: coral;
+  }
+  #buttons{
+      padding: 10px;
+      position: relative;
+      top: 4px;
+  }
+  
+  .dropdown-menu a:hover{
+      background-color:gray;
+  }
+  .dropdown4{
+    position: relative;
+    top: -76px;
+    left: 360px;
+  }
+  tr{
+    background-color:white;
+  }
+  /* .btn{
+    position: absolute;
+    left: 1300px;
+    top: 200px;
+  } */
+  
+ .search_box{
+ 
+    width: 100%;
+    border: 2px solid black;
+    background-color: #fff;
+    COLOR: blue;
+    border-radius: 7px;
+ 
+  }
+
+  #searchButton{
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+  }
+  .dropdown1{
+    position: relative;
+    left: 950px;
+    top:45px;
+    cursor: pointer;
+  }
+  .second {
+  
+    position: absolute;
+    left: 1300px;
+  }
+  .dropdown3{
+    position: relative;
+    left: 170px;
+    top: -38px;
+  }
+  #third{
+    position: absolute;
+    left: 100px;
+  }
+
+  #sec{
+    width: 145px;
+    height: 40px;
+    position: relative;
+    top: 50px;
+    left: 800px;
+    background-color: aqua;
+  }
+
+  .bottom-field{
+    background-color: aqua;
+  }
+
+  #button12{
+    width:150px;
+    height: 40px;
+    top: 80px;
+    position: relative;
+    background-color: navy;
+    left: 1100px;
+  }
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination a {
+  color: #333;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  border: 1px solid #ccc;
+  margin: 0 5px;
+  border-radius: 5px;
+}
+
+.pagination a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.pagination .active {
+  background-color: #333;
+  color: #fff;
+}
+
+
+.dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.edit-icon::before {
+  content: "\270E"; /* Pencil icon (✎) */
+  cursor: pointer;
+}
+
+.edit-icon:hover + .dropdown {
+  display: block;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.dropdown select {
+  width: 100px;
+
+}
+
+.fa-solid {
+
+  position: relative;
+  left:30px;
+}
+
+
+.filter-select {
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 14px;
+    position:relative;
+    top: 115px;
+    margin-bottom: 4px;
+  z-index: 30000;
+   
+}
+.filter-select option {
+  font-family: 'Poppins', sans-serif; /* Change 'Poppins' to the desired font */
+  font-size: 14px; /* Adjust the font size as needed */
+  position: fixed;
+}
+
+#AddNew{
+  position: relative;
+  top: 10px;
+  left: 80px;
+    width: 100px;
+    height: 80x;
+    border:2px solid blue;
+    border-radius: 5px;
+    background-color:aqua;
+}
+
+#paginationn{
+  position: relative;
+  background-color: aqua;
+  top: 30px;
+  left: 20px;
+  padding: 15px;
+}
+
+#table1 {
+  width: 100%;
+}
+
+
+/* //css for dynamic column */
+.hello{
+ padding-left: 180px;
+  height: 50x;
+  justify-content: center;
+
+}
+#item{
+  display: none;
+}
+
+.tgl{
+  padding: 10px;
+}
+
+
+   
+/* Add this to your CSS file or style section */
+.actions_col input[type="checkbox"] {
+  /* Adjust styles as needed */
+  display: inline-block;
+  width: auto;
+  margin: 0; /* You can adjust the margin as per your design */
+}
+
+/* Your existing CSS styles here */
+
+/* Style for the checkbox column */
+.actions_col {
+    width: 50px; /* Adjust the width as needed */
+}
+
+/* Style for the checkbox itself */
+.actions_col input[type="checkbox"] {
+    margin: 0; /* Adjust margin as per your design */
+    display: block;
+}
+
+/* Style for the header of the checkbox column */
+.actions_col th {
+    text-align: center;
+}
+
+/* Add this to your existing style block */
+.actions_col {
+    text-align: center;
+}
+
+/* Adjust other styles as needed */
+.pagination button{
+  padding: 8px;
+  background-color: #fff;
+  margin: 5px ;
+}
+
+.SearchbarIndi{
+  width: 150px;
+  display: block;
+  margin-top: 3px;
+}
